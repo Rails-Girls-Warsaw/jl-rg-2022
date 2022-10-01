@@ -1,0 +1,8 @@
+<%= @entries.count %> 
+
+<% @entries.each do |entry| %>
+    <h1><%= entry.title %></h1>
+    <h4><%= entry.header %></h4>
+    <p><%= entry.created_at %></p>
+    <br>
+<% end %>
