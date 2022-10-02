@@ -2,3 +2,5 @@
 <h4><%= @entry.header %></h4>
 <p><%= @entry.created_at %></p>
 <p><%= @entry.content %></p>
+<%= link_to 'Edytuj', edit_entry_path(@entry) %>
+<%= link_to 'Wróć do listy', entries_path %>

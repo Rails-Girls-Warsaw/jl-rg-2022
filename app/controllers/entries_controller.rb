@@ -12,7 +12,26 @@ class EntriesController < ApplicationController
     end
 
     def create
-        Entry.create(title: params[:entry][:title], content: params[:entry][:content])
+        Entry.create(
+            title: params[:entry][:title],
+            header: params[:entry][:header],
+            content: params[:entry][:content]
+        )
         redirect_to entries_path
+    end
+
+    def edit
+        @entry = Entry.find(params[:id])
+    end
+
+    def update
+        @entry = Entry.find(params[:id])
+        @entry.update(
+            title: params[:entry][:title],
+            header: params[:entry][:header],
+            content: params[:entry][:content]
+        )
+
+        redirect_to entry_path(@entry)
     end
 end
