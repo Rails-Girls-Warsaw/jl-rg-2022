@@ -1,5 +1,7 @@
 <%= @entries.count %> 
 
+<%= link_to 'Dodaj nowy wpis', new_entry_path %>
+
 <% @entries.each do |entry| %>
     <h1><%= link_to entry.title, entry_path(entry) %></h1>
     <h4><%= entry.header %></h4>

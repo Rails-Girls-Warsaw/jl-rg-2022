@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get '/xyz' => 'welcome#xyz'
-  get '/entries' => 'entries#index'
-  get '/entries/:id' => 'entries#show', as: :entry
+
+  resources :entries
 
   root 'entries#index'
 end

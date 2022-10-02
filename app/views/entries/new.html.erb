@@ -1,0 +1,9 @@
+<html data-turbo="false">
+    <%= form_with model: @entry do |f| %>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+        <%= f.label :content %>
+        <%= f.text_area :content%>
+        <%= f.submit "Zapisz" %>
+    <% end %>
+</html>
